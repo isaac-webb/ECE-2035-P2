@@ -320,6 +320,9 @@ TEST(Delete, Backward_NULL)
 
 	// Attempt to delete a NULL current pointer
 	EXPECT_EQ(NULL, deleteBackward(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Delete, Backward_Single)
@@ -342,6 +345,9 @@ TEST(Delete, Backward_Single)
 	EXPECT_EQ(NULL, getHead(list));
 	EXPECT_EQ(NULL, getTail(list));
 	EXPECT_EQ(NULL, getCurrent(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Delete, Backward_Two)
@@ -440,6 +446,9 @@ TEST(Delete, Forward_NULL)
 
 	// Attempt to delete a NULL current pointer
 	EXPECT_EQ(NULL, deleteForward(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Delete, Forward_Single)
@@ -462,6 +471,9 @@ TEST(Delete, Forward_Single)
 	EXPECT_EQ(NULL, getHead(list));
 	EXPECT_EQ(NULL, getTail(list));
 	EXPECT_EQ(NULL, getCurrent(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Delete, Forward_Two)
@@ -560,6 +572,9 @@ TEST(Remove, Backward_NULL)
 
 	// Attempt to remove a NULL current pointer
 	EXPECT_EQ(NULL, removeBackward(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Remove, Backward_Single)
@@ -582,6 +597,9 @@ TEST(Remove, Backward_Single)
 	EXPECT_EQ(NULL, getHead(list));
 	EXPECT_EQ(NULL, getTail(list));
 	EXPECT_EQ(NULL, getCurrent(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Remove, Backward_Two)
@@ -680,6 +698,9 @@ TEST(Remove, Forward_NULL)
 
 	// Attempt to remove a NULL current pointer
 	EXPECT_EQ(NULL, removeForward(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Remove, Forward_Single)
@@ -702,6 +723,9 @@ TEST(Remove, Forward_Single)
 	EXPECT_EQ(NULL, getHead(list));
 	EXPECT_EQ(NULL, getTail(list));
 	EXPECT_EQ(NULL, getCurrent(list));
+
+	// Destroy the list
+	destroyList(list);
 }
 
 TEST(Remove, Forward_Two)
