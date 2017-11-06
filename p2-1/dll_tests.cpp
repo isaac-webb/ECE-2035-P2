@@ -84,7 +84,7 @@ TEST(Insert, Head_Multiple)
 		insertHead(list, m[i]);
 
 	// Make sure the current pointer wasn't updated more than once
-	EXPECT_EQ(m[0], getCurrent(list));
+	EXPECT_EQ(NULL, getCurrent(list));
 
 	// Check forward links
 	ASSERT_EQ(m[2], getHead(list));
@@ -133,7 +133,7 @@ TEST(Insert, Tail_Multiple)
 		insertTail(list, m[i]);
 
 	// Make sure current isn't updated more than once
-	EXPECT_EQ(m[0], getCurrent(list));
+	EXPECT_EQ(NULL, getCurrent(list));
 
 	// Check backward links
 	ASSERT_EQ(m[2], getTail(list));
@@ -413,9 +413,9 @@ TEST(Delete, Backward_Multiple)
 	DLinkedList* list = create_dlinkedlist();
 	insertHead(list, m[0]);
 	insertTail(list, m[1]);
-	insertAfter(list, m[2]);
 	ASSERT_EQ(m[1], getTail(list));
 	ASSERT_EQ(m[0], getHead(list));
+	insertAfter(list, m[2]);
 	ASSERT_EQ(m[2], getNext(list));
 
 	// Invoke deleteBackward and assert m[0] to be the return
@@ -533,9 +533,9 @@ TEST(Delete, Forward_Multiple)
 	DLinkedList* list = create_dlinkedlist();
 	insertHead(list, m[0]);
 	insertTail(list, m[1]);
-	insertAfter(list, m[2]);
 	ASSERT_EQ(m[1], getTail(list));
 	ASSERT_EQ(m[0], getHead(list));
+	insertAfter(list, m[2]);
 	ASSERT_EQ(m[2], getNext(list));
 
 	// Invoke deleteForward and assert m[1] to be the return
@@ -653,9 +653,9 @@ TEST(Remove, Backward_Multiple)
 	DLinkedList* list = create_dlinkedlist();
 	insertHead(list, m[0]);
 	insertTail(list, m[1]);
-	insertAfter(list, m[2]);
 	ASSERT_EQ(m[1], getTail(list));
 	ASSERT_EQ(m[0], getHead(list));
+	insertAfter(list, m[2]);
 	ASSERT_EQ(m[2], getNext(list));
 
 	// Invoke removeBackward and assert m[2] to be the return
@@ -773,9 +773,9 @@ TEST(Remove, Forward_Multiple)
 	DLinkedList* list = create_dlinkedlist();
 	insertHead(list, m[0]);
 	insertTail(list, m[1]);
-	insertAfter(list, m[2]);
 	ASSERT_EQ(m[1], getTail(list));
 	ASSERT_EQ(m[0], getHead(list));
+	insertAfter(list, m[2]);
 	ASSERT_EQ(m[2], getNext(list));
 
 	// Invoke removeForward and assert m[2] to be the return

@@ -41,7 +41,6 @@ void insertHead(DLinkedList* dLinkedList, void* data) {
 	if (dLinkedList->head == NULL){
 		dLinkedList->head = newNode;
 		dLinkedList->tail = newNode;
-		dLinkedList->current = newNode;
 	} else {
 		newNode->next = dLinkedList->head;
 		(dLinkedList->head)->previous = newNode;
@@ -58,7 +57,6 @@ void insertTail(DLinkedList* dLinkedList, void* data) {
 	if (dLinkedList->tail == NULL) {
 		dLinkedList->head = node;
 		dLinkedList->tail = node;
-		dLinkedList->current = node;
 	} else {
 		node->previous = dLinkedList->tail;
 		(dLinkedList->tail)->next = node;
