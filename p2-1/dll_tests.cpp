@@ -600,6 +600,7 @@ TEST(Remove, Backward_Single)
 
 	// Destroy the list
 	destroyList(list);
+	free(m[0]);
 }
 
 TEST(Remove, Backward_Two)
@@ -629,6 +630,7 @@ TEST(Remove, Backward_Two)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[1]);
 }
 
 TEST(Remove, Backward_Two_NULL)
@@ -658,6 +660,7 @@ TEST(Remove, Backward_Two_NULL)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[0]);
 }
 
 TEST(Remove, Backward_Multiple)
@@ -689,6 +692,7 @@ TEST(Remove, Backward_Multiple)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[2]);
 }
 
 TEST(Remove, Forward_NULL)
@@ -726,6 +730,7 @@ TEST(Remove, Forward_Single)
 
 	// Destroy the list
 	destroyList(list);
+	free(m[0]);
 }
 
 TEST(Remove, Forward_Two)
@@ -755,6 +760,7 @@ TEST(Remove, Forward_Two)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[0]);
 }
 
 TEST(Remove, Forward_Two_NULL)
@@ -784,6 +790,7 @@ TEST(Remove, Forward_Two_NULL)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[1]);
 }
 
 TEST(Remove, Forward_Multiple)
@@ -815,4 +822,5 @@ TEST(Remove, Forward_Multiple)
 	
 	// Delete the list
 	destroyList(list);
+	free(m[2]);
 }
